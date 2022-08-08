@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calvin Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="https://docs.google.com/document/d/1pQoZXEakmJJnUrJTVzFugPWsibnOpBF8/edit?usp=sharing&ouid=101251594453496519519&rtpof=true&sd=true">Resume</a></li>
+                <li><a href="https://www.linkedin.com/in/calvinsalsali/">Linkedin</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1><b>Hi, I'm Calvin Salsali</b></h1>
+            <p><b>Aspiring Software Engineer studying Engineering 1 at McMaster University.</b></p>
+        </div>
+    </div>
+</div>
+<!--about me section-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <img src="images/user.png">
+            </div>
+            
+            <div class="col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>Hello! I'm Calvin and I have a passion for problem solving and innovation.
+                <br>
+                <br>I'm a student from Waterloo who is presently enrolled in McMaster University's Engineering 1 co-op program. My background in science and problem-solving is one of my strongest strengths, and I like using these skills to take on any problems that come my way. Whether it's via studying, playing a casual game of chess, or learning new topics, I'm always pushing myself to keep my mind sharp.
+                <br>
+                <br>I've only begun to understand the fundamentals of web programming, but as I get stronger at it, I aim to further my work in AI/ML.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML</span><br>Beginner/Learning</li>
+                        <li><span>CSS</span><br>Beginner/Learning</li>
+                        <li><span>Javascript</span><br>Beginner/Learning</li>
+                        <li><span>Python</span><br>Intermediate</li>
+                        <li><span>Proficient Technologies</span><br>Trello, Figma, Microsoft Excel/Word, Photoshop</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span> July 2021- August 2022</span><br>Logistics Lead at JAMHacks</li>
+                        <li><span>July 2021 - August 2021</span><br>Summer Research Intern at EPS</li>
+                        <li><span>July 2019- August 2020</span><br>Employee at Tim Hortons</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - Present</span><br>Engineering 1 student at McMaster</li>
+                        <li><span>2018 - 2022</span><br>Student at Sir John A. Macdonald</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+<!--Contact form-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>Email: cs.salsali@gmail.com</p>
+                <p>Phone: (226)-988-2371</p>
+                <p>You can't actually contact me through the form right now, but I do respond to the options above!</p>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
